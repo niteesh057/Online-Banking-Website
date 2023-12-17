@@ -1,0 +1,327 @@
+/* Header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 20px 0;
+    background-color: black;
+}
+#header .logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+#header .logo a {
+    color: #fff;
+}
+#header .logo img {
+    max-height: 45px;
+}
+
+/* navigation menu */
+.navbar {
+    padding: 0;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar li {
+    position: relative;
+}
+.navbar > ul > li {
+    padding: 10px 0 10px 24px;
+}
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+}
+.navbar a i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+.navbar > ul > li > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.navbar a:hover:before,.navbar li:hover > a:before,.navbar .active:before {
+    visibility: visible;
+    width: 100%;
+}
+.navbar a:hover,.navbar .active,.navbar li:hover > a {
+  color: #fff;
+}
+.navbar .getstarted {
+    padding: 8px 25px;
+    margin-left: 30px;
+    border-radius: 30px;
+    color: yellow;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.navbar .getstarted:hover {
+    color: #fff;
+    border-color: yellow;
+}
+.navbar .getstarted:before,.navbar li:hover > .getstarted:before {
+    visibility: hidden;
+}
+
+
+
+/* home section */
+#home {
+    width: 100%;
+    height: 100vh;
+    background: #fff; 
+    background-size: cover;
+}
+#home .container, #home .container-fluid {
+    padding-top: 84px;
+}
+#home h1 {
+    margin-bottom: 15;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #000;
+    text-align: center;
+}
+#home h2 {
+    color: #000;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    text-align: center;
+}
+#home .btn-get-started {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 30px;
+    transition: 0.5s;
+    margin-top: 30px;
+    margin-right: 20px;
+    color: #000;
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.homebtn{
+    display: flex;   
+    justify-content: center; 
+}
+@media (max-width: 768px) {
+    .homebtn{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+}
+#home .btn-get-started:hover {
+    background: #000;
+    color: yellow;
+}
+
+/* for all sections */
+section {
+    padding: 100px 0;
+    overflow: hidden;
+}
+.section-bg {
+    background-color: #f9f8ff;
+}
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #5846f9;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+.section-title p {
+    margin-bottom: 0;
+}
+
+/* services */
+.services .container .section-title{
+    color: #000;
+}
+.services .icon-box {
+    text-align: center;
+    padding: 70px 20px 80px 20px;
+    transition: all ease-in-out 0.3s;
+    background: #000;
+}
+.services .icon-box h4 {
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+    font-size: 22px;
+}
+.services .icon-box h4{
+    color: yellow;
+    transition: ease-in-out 0.3s;
+}
+.services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #fff;
+}
+.services .icon-box:hover {
+    background-color: rgb(245, 245, 151);
+    box-shadow: 0px 0 25px 0 #000;
+}
+.services .icon-box:hover p{
+    color: #000;
+}
+.services .icon-box:hover h4{
+    color: #000;
+}
+
+/* contact */
+.contact .container .section-title{
+    color: #000;
+}
+.contact .info-box {
+    color: #000;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 20px 0 30px 0;
+    background: rgb(245, 245, 151);
+}
+.contact .info-box i {
+    font-size: 32px;
+    color: #000;
+    border-radius: 50%;
+    padding: 8px;
+}
+.contact .info-box h3 {
+    color: #000;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.contact .info-box p {
+    padding: 0;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* footer */
+#footer {
+    color: #fff;
+    font-size: 14px;
+    background: #000;
+    background-size: cover;
+}
+#footer .copyright-wrap {
+    border-top: 1px solid #8577fb;
+}
+#footer .credits {
+    padding-top: 5px;
+    font-size: 13px;
+    color: #fff;
+}
+#footer .credits a {
+    color: #fff;
+}
+#footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+#footer .social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: yellow;
+    text-decoration: none;
+}
+
+/* back-to-top-button */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: yellow;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+.back-to-top i {
+    font-size: 28px;
+    color: #000;
+    line-height: 0;
+}
+.back-to-top:hover {
+background: #fff;
+color: #fff;
+}
+.back-to-top.active {
+visibility: visible;
+opacity: 1;
+}
+.getstarted, .createbtn{
+    text-decoration: none;
+}
